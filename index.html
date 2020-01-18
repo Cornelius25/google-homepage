@@ -7,14 +7,14 @@
 		}
 
 		.top{
-			position: fixed;
+			/*position: fixed;*/
 			top: 0;
 			width: 100%;
 
 		}
 
 		.bottom{
-			position: fixed;
+			/*position: fixed;*/
 			bottom: 0;
 			width: 100%;
 			background-color: rgb(242, 242, 242); 
@@ -24,70 +24,82 @@
 			float: right;
 			padding-right: 8px;
 		}
-		.GoogAppButton{
+		/*.GoogAppButton{
 			background-image: "https://ssl.gstatic.com/gb/images/i1_1967ca6a.png";
 			background-position: -132px -38px;
 			background-size: 528px 68px;
 			border-bottom-right-radius: 2px
 			border-bottom-left-radius: 2px;
 
-		}
+		}*/
 		a{
 			text-decoration: none;
 		}
-		.fupayme{
+		/*.fupayme{
 			
 			height: 80%;
     		display: flex;
 		    align-items: center;
 		    justify-content: center;
-		}
+		}*/
 		.middle {
 			
 			vertical-align: middle;
 			text-align: center;
 
 		}
+		#bigdiv{
+			height: 100%;
+			display: grid;
+			grid-template-rows: 20% 60% 20%;
+			grid-template-areas: "top" "middle" "bottom"
+		}
+		#topdiv{
+			grid-area: top;
+			
+		}
+		#logo{
+			grid-area: middle;
+		}
+		#bottomdiv{
+			grid-area: bottom;
+		}
+
 	</style>
 </head>
 <body>
-	
-<ul class="top" style="float: left;">
-	<li><a href="#about">About</a></li>
-	<li><a href="#store">Store</a></li>
-	<li class="right"><a href="#gmail">Gmail</a></li>
-	<li class="right"><a href="#images">Images</a></li>
-	<li class="right" id="GoogAppButton"><a href="#thingy">placehold</a></li>
-	<li class="right"><a href="#Sign-in">Sign In</a></li>
 
-
-
-</ul>
-
-<div class="fupayme">
-	<div  class="middle" >	
-	
+<div id="bigdiv">
+	<div id="topdiv"></div>
+		<ul class="top" style="float: left;">
+		<li><a href="#about">About</a></li>
+		<li><a href="#store">Store</a></li>
+		<li class="right"><a href="#gmail">Gmail</a></li>
+		<li class="right"><a href="#images">Images</a></li>
+		<li class="right" id="GoogAppButton"><a href="#thingy">placehold</a></li>
+		<li class="right"><a href="#Sign-in">Sign In</a></li>
+		</ul>
+	<div id="logo"></div>
 		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="This should be the google logo, fam">
 
 		<form>
 			<input type="text" name="search">
 		</form>
-	</div>
-</div>
-<div class="bottom"> <ul >
-	<li><a href="#Advertising">Advertising</a></li>
-	<li><a href="#Business">Business</a></li>
-	<li><a href="#How-Search-Works">How Search Works</a></li>
-	<li class="right"><a href="#Privacy">Privacy</a></li>
-	<li class="right"><a href="#Terms">Terms</a></li>
-	<li class="right"><a href="#Settings">Settings</a></li>
+	<div id="bottomdiv"></div>
+		<ul class="bottom">
+		<li><a href="#Advertising">Advertising</a></li>
+		<li><a href="#Business">Business</a></li>
+		<li><a href="#How-Search-Works">How Search Works</a></li>
+		<li class="right"><a href="#Privacy">Privacy</a></li>
+		<li class="right"><a href="#Terms">Terms</a></li>
+		<li class="right"><a href="#Settings">Settings</a></li>
 
-</ul></div>
+		</ul>
+
+</div>
 
 
 </body>
-
-
 
 
 </html>
