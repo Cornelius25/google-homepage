@@ -2,6 +2,9 @@
 <html>
 <head>
 	<style>
+		html,body{
+			height: 100%
+		}
 		li{
 			display: inline;
 		}
@@ -51,7 +54,7 @@
 		#bigdiv{
 			height: 100%;
 			display: grid;
-			grid-template-rows: 20% 60% 20%;
+			grid-template-rows: auto 60% auto;
 			grid-template-areas: "top" "middle" "bottom"
 		}
 		#topdiv{
@@ -64,13 +67,14 @@
 		#bottomdiv{
 			grid-area: bottom;
 		}
+		
 
 	</style>
 </head>
 <body>
 
 <div id="bigdiv">
-	<div id="topdiv"></div>
+	<div id="topdiv">
 		<ul class="top" style="float: left;">
 		<li><a href="#about">About</a></li>
 		<li><a href="#store">Store</a></li>
@@ -79,13 +83,15 @@
 		<li class="right" id="GoogAppButton"><a href="#thingy">placehold</a></li>
 		<li class="right"><a href="#Sign-in">Sign In</a></li>
 		</ul>
-	<div id="logo"></div>
+	</div>
+	<div id="logo" class="middle">
 		<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="This should be the google logo, fam">
 
 		<form>
 			<input type="text" name="search">
 		</form>
-	<div id="bottomdiv"></div>
+	</div>
+	<div id="bottomdiv">
 		<ul class="bottom">
 		<li><a href="#Advertising">Advertising</a></li>
 		<li><a href="#Business">Business</a></li>
@@ -95,7 +101,7 @@
 		<li class="right"><a href="#Settings">Settings</a></li>
 
 		</ul>
-
+	</div>
 </div>
 
 
